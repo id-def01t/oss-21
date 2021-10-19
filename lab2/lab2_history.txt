@@ -1,0 +1,101 @@
+    1  mkdir test
+    2  cd test
+    3  touh file
+    4  touch file
+    5  chmod ugo-rwx file
+    6  cat file
+    7  ll
+    8  ls -l
+    9  chmod ugo+-w- file
+   10  ll
+   11  chmod ugo+w file
+   12  ll
+   13  chmod ugo+--w file
+   14  ll
+   15  chmod ugo+w file
+   16  ll
+   17  chmod u+w file
+   18  ll
+   19  chmod ugo-rwx file
+   20  ls
+   21  ll
+   22  chmod u+w file
+   23  ll
+   24  nano file
+   25  ls
+   26  nano file
+   27  ls
+   28  cat file
+   29  chmod g+r file
+   30  ll
+   31  cat file'
+   32  cat file
+   33  chmod u+r file
+   34  ll
+   35  cat file
+   36  cd ..
+   37  ls
+   38  cd test
+   39  ls
+   40  mkdir dir
+   41  nano new_file
+   42  ls
+   43  rm new_file
+   44  cd dit
+   45  cd dir
+   46  nano new_file
+   47  ls
+   48  cd ..
+   49  chmod ugo-x dir
+   50  ll
+   51  ls dir
+   52  cd dir
+   53  cat /dir/new_file
+   54  cat dir/new_file
+   55  rm dir/new_file
+   56  chown root dir
+   57  chown root file
+   58  touch file1 | umask u=rw g= o=
+   59  ll
+   60  touch file1 | umask -s u=rw,go-rwx
+   61  touch file1 | umask -S  u=rw,go-rwx
+   62  ll
+   63  rm file1
+   64  touch file1 | umask -S  u=rw, go-rwx
+   65  touch file1 | umask -S  u=rw,go-rwx
+   66  ll
+   67  rm file1
+   68  touch file1
+   69  ll
+   70  rm file1
+   71  umask -S u=rw,go-rwx
+   72  touch file1
+   73  ls
+   74  ll
+   75  umask -S ugo=rw
+   76  touch file2
+   77  ll
+   78  cd ..
+   79  ls
+   80  cp -r test /oss
+   81  cp -r test oss/
+   82  cd test
+   83  ls
+   84  ll dir
+   85  cd dir
+   86  chmod ugo=rwx dir
+   87  cd dir
+   88  ll
+   89  cd ..
+   90  cp -r test oss/
+   91  cp -r test /oss/
+   92  cp -r test /oss
+   93  cd test
+   94  ll
+   95  chmod ugo=x file
+   96  sudo chmod ugo=x file
+   97  chmod ugo=x file1
+   98  chmod ugo=x file2
+   99  cd ..
+  100  cp -r test oss/
+  101  history > lab2_history.txt

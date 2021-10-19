@@ -1,0 +1,16 @@
+.:
+total 4
+-rw-rw-r--. 1 student student 1819 Oct 19 20:28 lab2_history.txt
+-rw-r--r--. 1 root    root       0 Oct 19 20:36 lab2_ls-lR.txt
+drwxrwxrwx. 3 student student   55 Oct 19 20:29 test
+
+./test:
+total 4
+drw-rw-rw-. 2 student root 22 Oct 19 20:29 dir
+----r-----. 1 root    root  6 Oct 19 20:29 file
+-rw-------. 1 student root  0 Oct 19 20:29 file1
+-rw-rw-rw-. 1 student root  0 Oct 19 20:29 file2
+
+./test/dir:
+total 4
+-rw-r--r--. 1 student root 6 Oct 19 20:29 new_file
