@@ -1,5 +1,0 @@
-    1  sudo id
-    2  cat /var/log/messages
-    3  sudo cat /var/log/messages
-    4  su
-    5  history > lab1_history6.txt
