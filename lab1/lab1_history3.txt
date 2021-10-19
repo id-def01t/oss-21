@@ -1,0 +1,82 @@
+    1  mkdir fruits
+    2  cd /
+    3  mkdir ~/animals
+    4  touch /tmp/temp
+    5  cd ~/fruits
+    6  touch apple banana pineaple lion
+    7  ls
+    8  cd ..
+    9  ls
+   10  cd fruits
+   11  touch ~/animals/cat.txt
+   12  touch ~/animals/dog.txt
+   13  touch ~/animals/elephant.txt
+   14  ls -l
+   15  ls b*
+   16  ls *a
+   17  ls [bi]*
+   18  cd /
+   19  ls
+   20  cd /etc/passwd ~
+   21  cp /etc/passwd ~
+   22  cat /etc/issue
+   23  man cp
+   24  ls
+   25  cd ~
+   26  ls
+   27  cd ..
+   28  ls
+   29  cp -f /etc/passwd ~/fruits/apple
+   30  cd ~
+   31  cat /fruits/apple
+   32  ls
+   33  cd fruits
+   34  ls
+   35  cat apple
+   36  ls
+   37  mv lion ../animals
+   38  ls
+   39  cd ../animals
+   40  ls
+   41  cd ../fruits
+   42  ls
+   43  rm pineaple pineapple
+   44  mv pineaple pineapple
+   45  ls
+   46  touch pineaple
+   47  mv pineaple pineapple
+   48  ls
+   49  cd /
+   50  cp -f /etc/issue ~/fruits/apple
+   51  cd ~/fruits
+   52  cat apple
+   53  man wc
+   54  cd /
+   55  wc -l /etc/passwd
+   56  cd ~
+   57  ln -s /etc/passwd passwd_link
+   58  ln .bash_history history_hard
+   59  ls
+   60  ls -l ~/.bash_history
+   61  ls -l
+   62  rm /fruits/apple
+   63  ls
+   64  cd fruits
+   65  ls
+   66  rm apple
+   67  cd ~
+   68  mkdir rmme
+   69  rmdir rmme
+   70  rmdir fruits
+   71* man r
+   72  rm -fr fruits
+   73  ls
+   74  cat etc/passwd
+   75  cd /
+   76  cat /etc/passwd /var/log/boot.log
+   77  cp /etc/init.d/ ~
+   78  cp -r  /etc/init.d/ ~
+   79  cd ~
+   80  ls
+   81  rm -fr init.d
+   82  history > lab1_history3.txt
