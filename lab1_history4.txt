@@ -1,0 +1,39 @@
+    1  man cut
+    2  cut -d: -f1 /etc/passwd | less
+    3  cut -d: -f1 /etc/passwd | sort
+    4  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+    5  cat /etc/passwd
+    6  cut -d:x:*:*: -f1,3,4 /etc/passwd | column -ts: | less
+    7  cut -d*: -f1,3,4 /etc/passwd | column -ts: | less
+    8  cat /etc/passwd
+    9  cut -d: -f1,3,4 /etc/passwd | column -ts: | less
+   10  cat /etc/passwd
+   11  cut -d/ -f1,3,4 /etc/passwd | column -ts: | less
+   12  grep :/bin/bash /etc/passwd | wc -l
+   13  man grep
+   14  grep :/bin/bash /etc/passwd | cut -d: | sort -r 
+   15  grep :/bin/bash /etc/passwd | cut -d: -f1 | sort -r 
+   16  man ls
+   17  rpm -qa --qf '%{NAME}: %{SIZE}\n' | sort -rn -k2,2 | ls -S | head -n 25 #
+   18  rpm -ql man-db | xargs -l du 2> /dev/null | sort -n
+   19  top -b -n1 | sort
+   20  top -b -n1 | sort -k2
+   21  top -b -n1 | tail -n+8 | cut -c7- | tr -s ' ' '\t' | cut -f11,5
+   22  man rpm
+   23  cat /etc/passwd
+   24  cat /etc/passwd | column -ts: | sort -k1
+   25  cat /etc/passwd | column -ts: | tr -s ' ' '\t' | sort -k1
+   26  cat /etc/passwd | column -ts: | tr -s ' ' '\t' | tail -n+8 | sort -k1
+   27  cat /etc/passwd | column -ts: | tr -s ' ' '\t' | cut -f2,3,4,5 | sort -k1
+   28  cat /etc/passwd | column -ts: | tr -s ' ' '\t' | cut -f3,4,5 | sort -k1
+   29  cat /etc/passwd | column -ts: | tr -s ' ' '\t' | cut -f1,6 | sort -k1
+   30  git --version
+   31  cd /usr/share/doc/git-*
+   32  cat user-manual.txt | tr ' ' '\012' | tr '[:upper:]' '[:lower:]' | tr -d '[:punct:]' | grep -v '[^a-z]' | sort | uniq -c | sort -rn | head -5
+   33  cat user-manual.txt | tr -cs '[:alpha:]' '\n' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -rn | head -5
+   34  '[:lower:]' '[:upper:]' < user-manual.txt |  tr -d '[:punct:] \n\t' | fold -w1 | sort | uniq -c | sort 
+   35  '[:lower:]' '[:upper:]' < user-manual.txt |  tr -d '[:punct:] \n\t' | fold -w1 | sort | uniq -c | sort -rn | head -5
+   36  '[:lower:]' '[:upper:]' < user-manual.txt |  tr -d '[:punct:] \n\t' | fold -w1 | sort | uniq -c | sort 
+   37  tr -cs '[:alpha:]' '\n' < user-manual.txt | less | grep -E ........ | sort | uniq -c | sort -rn | head
+   38  cd ~
+   39  history > lab1_history4.txt
