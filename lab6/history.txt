@@ -1,0 +1,15 @@
+
+  515  dd if=/dev/zero of=./fs.img bs=1M count=10
+  516  losetup --find --show ./fs.img
+  517  losetup --list
+  518  mkfs -t ext4 /dev/loop0
+  519  blkid /dev/loop0
+  520  mount /dev/loop0 /mnt
+  521  mount | grep /mnt
+  522  df -h /mnt
+  523  df -hi /mnt
+  524  umount /dev/loop0
+  525  tune2fs -l /dev/loop0
+  526  losetup --detach /dev/loop0
+  527  losetup --list
+  528  history > history.txt
